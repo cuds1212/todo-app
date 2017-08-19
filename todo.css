@@ -1,0 +1,15 @@
+#container {
+	width: 360px;
+	margin: 100px auto;
+	/*border: 2px solid black;*/
+	box-shadow: 0 0 4px #000;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Completed todos styling. */
+.completed {
+	color: gray;
+	font-style: italic;
+	text-decoration: line-through;
+}
