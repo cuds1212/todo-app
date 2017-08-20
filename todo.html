@@ -3,24 +3,30 @@
 <head>
 	<title>My Todo List App From Scratch</title>
 
+	<!-- Normalize.css [https://necolas.github.io/normalize.css/]-->
+	<link rel="stylesheet"  href="normalize.css">
+
 	<!-- Local stylesheet -->
 	<link rel="stylesheet" href="todo.css">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<script src="https://use.fontawesome.com/ef6f855665.js"></script>
 </head>
 <body>
 	<!-- Main todo list container -->
 	<div id="container">
 		<!-- Title bar -->
-		<h1>My Todo List</h1>
+		<h1>My Todo List <i class="fa fa-plus" aria-hidden="true"></i></h1>
 		<!-- New todo input. -->
 		<input type="text" placeholder="Enter a new todo.">
 		<!-- List of default todos. -->
 		<ul>
-			<li>Buy a car. <span>X</span></li>
-			<li>Smell a rose. <span>X</span></li>
-			<li>Go shopping. <span>X</span></li>
+			<li>Buy a car. <span><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></span></li>
+			<li>Smell a rose. <span><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></span></li>
+			<li>Go shopping. <span><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></span></li>
 		</ul>
 	</div>
 

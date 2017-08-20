@@ -31,7 +31,28 @@ input[0].addEventListener("keypress", function(event){
 
 		var ul = document.getElementsByTagName("ul");
 		var newTodoHTML = document.createElement("li");
-		newTodoHTML.innerHTML = newTodo + " <span>X</span>";
+		newTodoHTML.innerHTML = newTodo + " <span><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></span>";
 		ul[0].appendChild(newTodoHTML);
 	}
 })
+
+// Remove todo item when X is pressed. Uses event capturing.
+
+document.getElementsByTagName("ul")[0].addEventListener("click", function(event){
+	if(event.target.matches("span")){
+		let x = event.target;
+		x.parentElement.parentElement.removeChild(x.parentElement);
+	}
+	else if(event.target.matches("i")){
+		let x = event.target;
+		x.parentElement.parentElement.parentElement.removeChild(x.parentElement.parentElement);
+	}
+	event.stopPropagation();
+}, true);
+
+
+document.getElementsByClassName("fa-plus")[0].addEventListener("click", function(event){
+	var input = document.getElementsByTagName("input")[0];
+
+	input.classList.toggle("show");
+});
