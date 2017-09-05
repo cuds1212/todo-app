@@ -40,19 +40,36 @@ input[0].addEventListener("keypress", function(event){
 
 document.getElementsByTagName("ul")[0].addEventListener("click", function(event){
 	if(event.target.matches("span")){
-		let x = event.target;
-		x.parentElement.parentElement.removeChild(x.parentElement);
+		event.target.parentElement.parentElement.removeChild(event.target.parentElement);
 	}
 	else if(event.target.matches("i")){
-		let x = event.target;
-		x.parentElement.parentElement.parentElement.removeChild(x.parentElement.parentElement);
+		event.target.parentElement.parentElement.parentElement.removeChild(event.target.parentElement.parentElement);
 	}
 	event.stopPropagation();
 }, true);
 
+// Display input box when + is clicked.
 
 document.getElementsByClassName("fa-plus")[0].addEventListener("click", function(event){
-	var input = document.getElementsByTagName("input")[0];
+	var input = document.getElementById("inputDiv");
 
-	input.classList.toggle("show");
+	if(input.style.maxHeight !== "0px"){
+		input.style.maxHeight = 0 + "px";
+		input.style.opacity = 0;
+		setTimeout(function(){	/* Hide input after slide completed. */
+			input.style.display = "none";
+		}, 500);
+	}
+	else{
+		input.style.display = "block";
+		input.style.maxHeight = input.scrollHeight + "px";
+		input.style.opacity = 1;
+	}
 });
+
+
+
+
+
+
+
