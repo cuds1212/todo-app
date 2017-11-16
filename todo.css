@@ -1,5 +1,5 @@
 body {
-	background: rgb(101,121,153); /* Solid background */
+	background: rgb(101,121,153);
 }
 
 /* Completed todos styling. */
@@ -17,6 +17,10 @@ body {
 	box-shadow: 0 2px 4px #000;
 
 	font-family: 'Roboto', sans-serif; /* Google fonts */
+}
+
+.fa-plus:hover, span:hover {
+	cursor: pointer;
 }
 
 h1 {
@@ -61,7 +65,7 @@ input:focus {
 	overflow: hidden;
 	opacity: 0;
 	max-height: 0px;
-	transition: max-height .3s ease-in-out,opacity .3s linear;
+	transition: max-height .3s ease-in-out, opacity .3s linear;
 }
 
 li {

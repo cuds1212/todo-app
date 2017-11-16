@@ -25,7 +25,6 @@ var input = document.getElementsByTagName("input");
 
 input[0].addEventListener("keypress", function(event){
 	if(event.which === 13){
-		// console.log("Enter was pressed!")
 		var newTodo = input[0].value;
 		input[0].value = ""; // Clear input field.
 
@@ -66,10 +65,3 @@ document.getElementsByClassName("fa-plus")[0].addEventListener("click", function
 		input.style.opacity = 1;
 	}
 });
-
-
-
-
-
-
-
